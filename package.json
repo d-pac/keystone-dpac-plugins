@@ -1,0 +1,40 @@
+{
+  "name": "keystone-dpac-plugins",
+  "version": "1.0.0",
+  "description": "Finds and prepares d-pac plugins for use in KeystoneJS",
+  "homepage": "http://www.d-pac.be",
+  "author": {
+    "name": "d-pac",
+    "email": "info@d-pac.be",
+    "url": "http://www.d-pac.be"
+  },
+  "repository": "https://github.com/d-pac/keystone-dpac-plugins",
+  "license": "GPL v3",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "d-pac",
+    "keystone"
+  ],
+  "dependencies": {
+    "d-pac.plugins-parser": "^1.0.0",
+    "peerdep": "^0.1.0",
+    "lodash": "^2.4.1"
+  },
+  "peerDependencies": {
+    "keystone": "^0.2.40"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jscs": "^1.2.0",
+    "jit-grunt": "^0.9.0",
+    "jshint-stylish": "^1.0.0",
+    "time-grunt": "^1.0.0"
+  },
+  "scripts": {
+    "test": "grunt",
+    "install": "peerdep"
+  }
+}
