@@ -2,6 +2,36 @@
 
 > Finds and prepares d-pac plugins for use in KeystoneJS
 
+## Installation
+
+```sh
+npm install --save keystone-dpac-plugins
+```
+
+## Usage
+
+```js
+// before `keystone.import( "models" );`
+// (1) setup
+var plugins = require("keystone-dpac-plugins");
+plugins.register();
+
+// in your models
+// (2) plugin selection
+var plugins = require("keystone-dpac-plugins");
+
+MyModel.add({
+    someField : {
+        type    : Types.Select,
+        options : plugins.list( "judge" )
+    }
+});
+```
+
+1. This will parse your project's `package.json` and iterate over the dependencies, if it encounters a [d-pac plugin module](https://github.com/d-pac/d-pac.docs/blob/master/analysis/plugin%20specification.md) it will read out the relevant data and store it.
+1. It returns a list with usable plugins (of type "judge" in the above example), readily consumable by a keystone `Select` field.
+
+**Note:** The plugin modules have NOT been required at this point and do not take up memory. The actual `require`'ing is left up to you.
 
 ## License
 
