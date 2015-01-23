@@ -38,7 +38,7 @@ function list( type ){
   if( config && config.pluginsScrobbled ){
     return getByType( config.plugins, type );
   } else {
-    return getByType( register( keystone ), type );
+    return getByType( register(), type );
   }
 }
 
