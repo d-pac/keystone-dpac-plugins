@@ -4,9 +4,9 @@ var _ = require( "lodash" );
 var pluginParser = require( "d-pac.plugin-parser" );
 var keystone = require( "keystone" );
 
-function register( opts ){
-
-  var dpacConfig = keystone.get( "d-pac" );
+function register( app,
+                   opts ){
+  var dpacConfig = app.get( "d-pac" );
   if( dpacConfig && dpacConfig.pluginsScrobbled ){
     return dpacConfig.plugins;
   } else {
@@ -17,9 +17,10 @@ function register( opts ){
             label : pluginConfig.label || pluginConfig.name
           }, pluginConfig );
         } )
-        .groupBy( "type" ) || [];
+        .groupBy( "type" )
+        .value() || [];
 
-    keystone.set( "d-pac", _.defaults( {
+    app.set( "d-pac", _.defaults( {
       pluginsScrobbled : true,
       plugins          : plugins
     }, dpacConfig ) );
@@ -38,7 +39,7 @@ function list( type ){
   if( config && config.pluginsScrobbled ){
     return getByType( config.plugins, type );
   } else {
-    return getByType( register(), type );
+    return getByType( register( keystone ), type );
   }
 }
 
