@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require( "lodash" );
-var pluginParser = require( "d-pac.plugin-parser" );
+var pluginParser = require( "d-pac.plugins-parser" );
 var keystone = require( "keystone" );
 
 function register( app,
