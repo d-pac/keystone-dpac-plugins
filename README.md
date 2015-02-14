@@ -33,6 +33,10 @@ MyModel.add({
 
 **Note:** The plugin modules have NOT been required at this point and do not take up memory. The actual `require`'ing is left up to you.
 
+## Example
+
+See [comparative-selection plugin][comparative-selection-url] for an example of a keystone/d-pac plugin.
+
 ## License
 
 GPL v3 © [d-pac](http://www.d-pac.be)
@@ -44,3 +48,4 @@ GPL v3 © [d-pac](http://www.d-pac.be)
 [travis-image]: https://travis-ci.org/d-pac/keystone-dpac-plugins.svg?branch=master
 [daviddm-url]: https://david-dm.org/d-pac/keystone-dpac-plugins.svg?theme=shields.io
 [daviddm-image]: https://david-dm.org/d-pac/keystone-dpac-plugins
+[comparative-selection-url]: https://github.com/d-pac/comparative-selection
