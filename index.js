@@ -2,7 +2,7 @@
 
 var _ = require( "lodash" );
 var pluginParser = require( "d-pac.plugins-parser" );
-var keystone = require( "keystone" );
+var resolve = require( "resolve" );
 
 function register( app,
                    opts ){
@@ -35,6 +35,9 @@ function getByType( collection,
 }
 
 function list( type ){
+  var keystone = require( resolve.sync( 'keystone', {
+    basedir : process.cwd()
+  } ) );
   var config = keystone.get( "d-pac" );
   if( config && config.pluginsScrobbled ){
     return getByType( config.plugins, type );

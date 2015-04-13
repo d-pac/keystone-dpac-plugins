@@ -54,16 +54,6 @@
     "requireKeywordsOnNewLine": [],
     "requireLineBreakAfterVariableAssignment": true,
     "requireLineFeedAtFileEnd": true,
-    "requirePaddingNewlinesBeforeKeywords": [
-        "do",
-        "for",
-        "if",
-        "switch",
-        "try",
-        "void",
-        "while",
-        "with"
-    ],
     "requirePaddingNewLinesInObjects": true,
     "requireParenthesesAroundIIFE": true,
     "requireSpaceAfterBinaryOperators": true,
@@ -87,10 +77,6 @@
     "validateIndentation": 2,
     "validateLineBreaks": "LF",
     "validateParameterSeparator": ", ",
-    "validateQuoteMarks": {
-        "mark": "\"",
-        "escape": true
-    },
     "fileExtensions": [
         ".js",
         "jscs"
