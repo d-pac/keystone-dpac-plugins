@@ -28,7 +28,7 @@ MyModel.add({
 });
 ```
 
-1. This will parse your project's `package.json` and iterate over the dependencies, if it encounters a [d-pac plugin module](https://github.com/d-pac/d-pac.docs/blob/master/analysis/plugin%20specification.md) it will read out the relevant data and store it.
+1. This will parse your project's `package.json` and iterate over the dependencies, if it encounters a [d-pac plugin module](http://d-pac.github.io/d-pac.docs/developer/plugin%20specification.html) it will read out the relevant data and store it.
 1. It returns a list with usable plugins (of type "judge" in the above example), readily consumable by a keystone `Select` field.
 
 **Note:** The plugin modules have NOT been required at this point and do not take up memory. The actual `require`'ing is left up to you.
